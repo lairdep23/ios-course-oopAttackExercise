@@ -10,15 +10,63 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var printLabel: UILabel!
+    
+    @IBOutlet weak var brootImage: UIImageView!
+    
+    @IBOutlet weak var soldierImage: UIImageView!
+    
+    var soldier: Soldier!
+    var broot: Enemy!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        broot = Enemy(name: "Broot", hp: 100, attackPower: 10)
+        
+        soldier = Soldier(name: "Soldier", hp: 100, attackPower: 10)
+        
     }
+    
+    @IBAction func brootAttackPressed(sender: AnyObject) {
+        
+        if broot.attemptAttack(broot.attackPower) {
+            printLabel.text = "Broot attacked Soldier for \(broot.attackPower) HP"
+        } else {
+            printLabel.text = "Broot attack was unsuccessful!"
+        }
+        
+        
+    }
+    
+    @IBAction func soldierAttackPressed(sender: AnyObject) {
+        
+        if soldier.attemptAttack(soldier.attackPower) {
+            printLabel.text = "Soldier attacked Broot for \(soldier.attackPower) HP"
+            
+                    
+        } else {
+            printLabel.text = "Soldier attack was unsuccessful!"
+        }
+        
+        if !broot.isAlive {
+            printLabel.text = "Killed Broot!"
+            soldierImage.hidden = true
+        }
+        
+        if !soldier.isAlive {
+            printLabel.text = "Killed "
+            brootImage.hidden = true
+        }
+        
+        
+    }
+    
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }

@@ -12,6 +12,9 @@
 		203F59CD1C6D6DF8007BEE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203F59CB1C6D6DF8007BEE9D /* Main.storyboard */; };
 		203F59CF1C6D6DF8007BEE9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203F59CE1C6D6DF8007BEE9D /* Assets.xcassets */; };
 		203F59D21C6D6DF8007BEE9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203F59D01C6D6DF8007BEE9D /* LaunchScreen.storyboard */; };
+		203F59DA1C6F983F007BEE9D /* SoldierClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F59D91C6F983F007BEE9D /* SoldierClass.swift */; };
+		203F59DC1C6F9857007BEE9D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F59DB1C6F9857007BEE9D /* Character.swift */; };
+		203F59DE1C6F9DB7007BEE9D /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F59DD1C6F9DB7007BEE9D /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		203F59CE1C6D6DF8007BEE9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		203F59D11C6D6DF8007BEE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203F59D31C6D6DF8007BEE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203F59D91C6F983F007BEE9D /* SoldierClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierClass.swift; sourceTree = "<group>"; };
+		203F59DB1C6F9857007BEE9D /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		203F59DD1C6F9DB7007BEE9D /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				203F59CE1C6D6DF8007BEE9D /* Assets.xcassets */,
 				203F59D01C6D6DF8007BEE9D /* LaunchScreen.storyboard */,
 				203F59D31C6D6DF8007BEE9D /* Info.plist */,
+				203F59D91C6F983F007BEE9D /* SoldierClass.swift */,
+				203F59DB1C6F9857007BEE9D /* Character.swift */,
+				203F59DD1C6F9DB7007BEE9D /* Enemy.swift */,
 			);
 			path = attackOopExerciseApp;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				203F59CA1C6D6DF8007BEE9D /* ViewController.swift in Sources */,
+				203F59DE1C6F9DB7007BEE9D /* Enemy.swift in Sources */,
+				203F59DA1C6F983F007BEE9D /* SoldierClass.swift in Sources */,
 				203F59C81C6D6DF8007BEE9D /* AppDelegate.swift in Sources */,
+				203F59DC1C6F9857007BEE9D /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				203F59D81C6D6DF8007BEE9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
