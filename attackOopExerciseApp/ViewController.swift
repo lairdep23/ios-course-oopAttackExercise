@@ -31,8 +31,11 @@ class ViewController: UIViewController {
     
     @IBAction func brootAttackPressed(sender: AnyObject) {
         
-        if broot.attemptAttack(broot.attackPower) {
+        if soldier.attemptAttack(broot.attackPower) {
             printLabel.text = "Broot attacked Soldier for \(broot.attackPower) HP"
+            
+        
+            
         } else {
             printLabel.text = "Broot attack was unsuccessful!"
         }
@@ -42,8 +45,10 @@ class ViewController: UIViewController {
     
     @IBAction func soldierAttackPressed(sender: AnyObject) {
         
-        if soldier.attemptAttack(soldier.attackPower) {
+        if broot.attemptAttack(soldier.attackPower) {
             printLabel.text = "Soldier attacked Broot for \(soldier.attackPower) HP"
+            
+        
             
                     
         } else {
@@ -52,12 +57,12 @@ class ViewController: UIViewController {
         
         if !broot.isAlive {
             printLabel.text = "Killed Broot!"
-            soldierImage.hidden = true
+            brootImage.hidden = true
         }
         
         if !soldier.isAlive {
-            printLabel.text = "Killed "
-            brootImage.hidden = true
+            printLabel.text = "Killed Soldier!"
+            soldierImage.hidden = true
         }
         
         

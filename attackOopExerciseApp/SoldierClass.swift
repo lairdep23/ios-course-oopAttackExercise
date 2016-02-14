@@ -18,6 +18,8 @@ class Soldier: Character {
         }
     }
     
+    
+    
     private var _numberOfWins = Int()
     
     var numberOfWins: Int {
@@ -30,7 +32,7 @@ class Soldier: Character {
         
         _name = name
     }
-    
+  
     
 }
 

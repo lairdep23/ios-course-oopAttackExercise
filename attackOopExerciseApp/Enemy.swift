@@ -30,6 +30,7 @@ class Enemy: Character {
         
         _name = name
     }
+    //override function
     
     
 }
