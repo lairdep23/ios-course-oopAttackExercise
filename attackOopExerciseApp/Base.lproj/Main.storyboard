@@ -133,6 +133,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G83-YD-9WV">
+                                <rect key="frame" x="169" y="272" width="263" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9Is-9m-UlV"/>
+                                    <constraint firstAttribute="width" constant="263" id="Udp-XZ-bgY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
+                                <state key="normal" title="Restart Game!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTS-Ae-n5D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -144,9 +158,11 @@
                             <constraint firstItem="W60-rL-2dB" firstAttribute="centerX" secondItem="2Ug-t3-YM4" secondAttribute="centerX" id="Hhz-LP-JnT"/>
                             <constraint firstItem="8Xi-0A-dk9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qfc-VL-zVw"/>
                             <constraint firstAttribute="trailing" secondItem="8Xi-0A-dk9" secondAttribute="trailing" id="T9x-Hj-f48"/>
+                            <constraint firstItem="G83-YD-9WV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TBv-jp-kb5"/>
                             <constraint firstItem="6vF-Fs-OIh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Vg2-Sd-FNm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h3z-eu-xnB" secondAttribute="bottom" constant="8" id="YJI-sN-E2e"/>
                             <constraint firstItem="HBJ-sN-O4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZMy-z9-Y9C"/>
+                            <constraint firstItem="G83-YD-9WV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zx1-ZB-Ns9"/>
                             <constraint firstItem="HBJ-sN-O4V" firstAttribute="top" secondItem="W60-rL-2dB" secondAttribute="bottom" id="b8l-9l-dyy"/>
                             <constraint firstItem="8Xi-0A-dk9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c35-J4-WyK"/>
                             <constraint firstItem="6E1-cy-Mj2" firstAttribute="centerX" secondItem="6vF-Fs-OIh" secondAttribute="centerX" id="d3S-zT-COz"/>
@@ -164,6 +180,7 @@
                     <connections>
                         <outlet property="brootImage" destination="95u-qn-rh5" id="svV-Gg-oDJ"/>
                         <outlet property="printLabel" destination="Udm-C9-cXn" id="yai-78-9a5"/>
+                        <outlet property="restartGameButton" destination="G83-YD-9WV" id="8gQ-N5-XQX"/>
                         <outlet property="soldierImage" destination="W60-rL-2dB" id="bk8-YH-cvU"/>
                     </connections>
                 </viewController>

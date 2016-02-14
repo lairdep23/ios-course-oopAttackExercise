@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var soldierImage: UIImageView!
     
+    @IBOutlet weak var restartGameButton: UIButton!
+    
     var soldier: Soldier!
     var broot: Enemy!
     
@@ -33,7 +35,12 @@ class ViewController: UIViewController {
         
         if soldier.attemptAttack(broot.attackPower) {
             printLabel.text = "Broot attacked Soldier for \(broot.attackPower) HP"
-            
+        
+            if !soldier.isAlive {
+                printLabel.text = "Broot Won!"
+                soldierImage.hidden = true
+                restartGameButton.hidden = false
+            }
         
             
         } else {
@@ -48,26 +55,27 @@ class ViewController: UIViewController {
         if broot.attemptAttack(soldier.attackPower) {
             printLabel.text = "Soldier attacked Broot for \(soldier.attackPower) HP"
             
-        
+            if !broot.isAlive {
+                printLabel.text = "Soldier Won!"
+                brootImage.hidden = true
+                restartGameButton.hidden = false
+            }
             
                     
         } else {
             printLabel.text = "Soldier attack was unsuccessful!"
         }
-        
-        if !broot.isAlive {
-            printLabel.text = "Killed Broot!"
-            brootImage.hidden = true
-        }
-        
-        if !soldier.isAlive {
-            printLabel.text = "Killed Soldier!"
-            soldierImage.hidden = true
-        }
-        
-        
     }
     
+    @IBAction func restartGame(sender: AnyObject) {
+        brootImage.hidden = false
+        soldierImage.hidden = false
+        printLabel.text = "Press Attack to Start"
+        restartGameButton.hidden = true
+        
+        viewDidLoad()
+        
+    }
     
     
 
